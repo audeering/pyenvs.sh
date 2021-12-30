@@ -43,9 +43,9 @@ create env_name2 3.8     # create `env_name2` with python3.8 and activate it
 deactivate               # deactivate the current active environment
 envs                     # list available environments
 envs size                # disk size of environments
-activate env_name        # activate virtual environment `env_name`
+activate env_name1       # activate virtual environment `env_name1`
 deactivate               # deactivate the current active environment
-delete env_name          # delete virtual environment `env_name`
+delete env_name1         # delete virtual environment `env_name1`
 envs                     # list available environments
 ```
 
