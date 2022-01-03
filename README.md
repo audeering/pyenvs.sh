@@ -5,22 +5,16 @@ Manage Python virtual environments.
 
 ## Installation
 
-Clone this repository with:
+Clone the repository to `~/git/pyenvs.sh`
+or another desired directory:
 
 ```bash
 git clone https://github.com/audeering/pyenvs.sh.git ~/git/pyenvs.sh
 ```
 
-Replace `~/git/pyenvs.sh` with your desired directory.
-
-In order to use it you have to source it:
-
-```bash
-source ~/git/pyenvs.sh/pyenvs.sh
-```
-
-The best way to make this permanent
-is to add the following lines to your `~/.bashrc` file.
+Source the file `pyenvs.sh` to use.
+To make it permanent,
+add the following lines to your `~/.bashrc` file.
 
 ```bash
 source ${HOME}/git/pyenvs.sh/pyenvs.sh
@@ -29,10 +23,12 @@ source ${HOME}/git/pyenvs.sh/pyenvs.sh
 
 ## Usage
 
-Manage python virtual environments with `virtualenv` in the folder
-`$HOME/.envs`.
-
-Usage:
+**pyenvs.sh** provides the commands
+`create`,
+`activate`,
+`delete`,
+`envs`
+to manage virtual environments with `virtualenv`.
 
 ```bash
 envs location            # dir where environments are stored
@@ -49,14 +45,45 @@ delete env_name1         # delete virtual environment `env_name1`
 envs                     # list available environments
 ```
 
-You can change the folder where the environments are stored
+You can change the folder
+where the environments are stored
 or the default Python version
-by exporting the following variables:
+by exporting
+`PYENVS_DIR`
+and `PYENVS_PYTHON_VERSION`.
+It's default values are:
 
 ```bash
 export PYENVS_DIR="${HOME}/.envs"
 export PYENVS_PYTHON_VERSION="3"
 ```
 
-You can also make those settings permanent
+You can make your settings permanent
 by adding them to your `~/.bashrc` file.
+
+
+### Install different Python versions
+
+As shown above
+you can specify the Python version to use
+for every virtual environment.
+To see which Python versions are available on your system
+you can run
+
+```bash
+$ ls -1 -d -- /usr/bin/python[0-9]\.[0-9]
+/usr/bin/python2.7
+/usr/bin/python3.6
+/usr/bin/python3.7
+/usr/bin/python3.8
+```
+
+To install a missing version under Ubuntu
+you can use the [deadsnakes
+PPA](https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa).
+
+```bash
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+$ sudo apt update && sudo apt upgrade
+$ $ sudo apt install python3.9
+```
