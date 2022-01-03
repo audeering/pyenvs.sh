@@ -30,8 +30,6 @@ source ${HOME}/git/pyenvs.sh/pyenvs.sh
 `envs`
 to manage virtual environments with `virtualenv`.
 
-Usage:
-
 ```bash
 envs location            # dir where environments are stored
 create env_name1         # create `env_name1` with default Python version
