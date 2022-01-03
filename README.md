@@ -29,6 +29,8 @@ source ${HOME}/git/pyenvs.sh/pyenvs.sh
 `delete`,
 `envs`
 to manage virtual environments with `virtualenv`.
+It deals easily with a large number of environments
+by automatic tab completion.
 
 ```bash
 envs location            # dir where environments are stored
