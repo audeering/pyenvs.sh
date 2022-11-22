@@ -44,7 +44,6 @@ envs size                # disk size of environments
 activate env_name1       # activate virtual environment `env_name1`
 deactivate               # deactivate the current active environment
 delete env_name1         # delete virtual environment `env_name1`
-envs                     # list available environments
 ```
 
 You can change the folder
