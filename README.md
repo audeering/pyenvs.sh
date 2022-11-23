@@ -36,9 +36,7 @@ by automatic tab completion.
 envs location            # dir where environments are stored
 create env_name1         # create `env_name1` with default Python version
                          # and activate it
-deactivate               # deactivate the current active environment
 create env_name2 3.8     # create `env_name2` with python3.8 and activate it
-deactivate               # deactivate the current active environment
 envs                     # list available environments
 envs size                # disk size of environments
 activate env_name1       # activate virtual environment `env_name1`
