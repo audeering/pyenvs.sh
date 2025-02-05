@@ -157,7 +157,7 @@ create() {
     fi
 
     virtualenv \
-        --python="/usr/bin/python${version}" \
+        --python="$(which python${version})" \
         "$(_pyenvs_dir)/${env}"
 
     activate "${env}"
